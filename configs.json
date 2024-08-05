@@ -1,0 +1,175 @@
+{
+  /* # THEME */
+  "workbench.colorTheme": "Omni",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
+  "material-icon-theme.folders.associations": {
+    "contexts": "shared",
+    "types": "typescript",
+    "migrations": "connection",
+    "modules": "components",
+    "dataset": "database",
+    "builders": "project"
+  },
+  "material-icon-theme.files.associations": {
+    "*.entity.ts": "Database",
+    "language.ts": "Log",
+    "ormconfig.js": "Database"
+  },
+  /* # FONTS */
+  "editor.fontSize": 18,
+  "editor.lineHeight": 24,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.multiCursorModifier": "alt",
+  /* # FILES AND FOLDERS */
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    ".next": true,
+    ".vercel": true,
+    "node_modules": true,
+    ".cache": true,
+    ".tmp": false,
+    "dist": false,
+    ".venv": false,
+    "next-env.d.ts": true,
+    ".husky": true,
+    ".github": true,
+    ".vscode": true,
+    ".editorconfig": true
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, node_modules",
+    "Cargo.toml": "Cargo.lock",
+    ".eslintrc.json": ".prettierrc, .prettierignore, .eslintignore, .lintstagedrc.js",
+    ".eslintrc.js": ".prettierrc, .prettierignore, .eslintignore, .lintstagedrc.js",
+    "eslint.config.mjs": ".prettierrc, .prettierignore, .eslintignore, .lintstagedrc.js",
+    ".env": "*.yml, .env.*, .gitignore, .npmrc",
+    "next.config.js": "next-env.d.ts, tsconfig.json, tailwind.config.js, postcss.config.js",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.svelte": "svelte",
+    "*.env*": "env"
+  },
+  //
+  "explorer.compactFolders": false,
+  "editor.renderLineHighlight": "gutter",
+  "workbench.editor.labelFormat": "default",
+  "extensions.ignoreRecommendations": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  /* # GIT - GITHUB */
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "always",
+  "git.ignoreRebaseWarning": true,
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": true,
+    "env": false
+  },
+  /* # CSS */
+  "tailwindCSS.experimental.classRegex": [
+    ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  /* # PHP */
+  "php.suggest.basic": false,
+  "php.validate.run": "onType",
+  "[php]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false
+  },
+  /* # JS / TS */
+  "typescript.format.enable": false,
+  "javascript.format.enable": false,
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  /* # PYTHON */
+  "python.testing.unittestEnabled": false,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.formatOnType": true
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  /* # C# */
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "editor.formatOnType": true
+  },
+  "omnisharp.useModernNet": false,
+  /* # SVELTE */
+  "svelte.enable-ts-plugin": true,
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  /* # HTML */
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  /* # RUST */
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true,
+  },
+  /* # THEME COLORS */
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["comment.block.json.comments", "meta.structure.dictionary.json.comments source.json.comments"],
+        "settings": {
+          "foreground": "#67E480",
+        }
+      }
+    ]
+  },
+  /* # OTHERS */
+  // Coisas de Extenções - Nem sei o que são essas configurações
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.accessibilitySupport": "off",
+  "diffEditor.ignoreTrimWhitespace": true,
+  "github.copilot.editor.enableAutoCompletions": true
+}
