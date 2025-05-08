@@ -57,7 +57,7 @@
     ".eslintrc.js": ".prettierrc, .prettierignore, .eslintignore, .lintstagedrc.js",
     "eslint.config.mjs": ".prettierrc, .prettierignore, .eslintignore, .lintstagedrc.js",
     ".env": "*.yml, .env.*, .gitignore, .npmrc",
-    "next.config.js": "next-env.d.ts, tsconfig.json, tailwind.config.js, postcss.config.js",
+    // "next.config.js": "next-env.*, tsconfig.*, tailwind.config.*, postcss.config.*",
     "*.sqlite": "${capture}.${extname}-*",
     "*.db": "${capture}.${extname}-*",
     "*.sqlite3": "${capture}.${extname}-*",
@@ -69,6 +69,7 @@
   "explorer.confirmDelete": false,
   "files.associations": {
     "*.css": "tailwindcss",
+    "*.postcss": "tailwindcss",
     "*.svelte": "svelte",
     "*.env*": "env"
   },
@@ -94,6 +95,11 @@
   "tailwindCSS.experimental.classRegex": [
     ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.lint.cssConflict": "error",
   /* # PHP */
   "php.suggest.basic": false,
   "php.validate.run": "onType",
@@ -106,15 +112,9 @@
   "javascript.format.enable": false,
   "javascript.suggest.autoImports": true,
   "typescript.suggest.autoImports": true,
-  "[typescript]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
-    }
-  },
-  "[typescriptreact]": {
-    "editor.formatOnSave": true,
+  "[javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit"
@@ -128,6 +128,8 @@
     "editor.tabSize": 4,
     "editor.formatOnType": true
   },
+  "python.experiments.optOutFrom": ["All"],
+  "python.envFile": "",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
@@ -153,23 +155,45 @@
   /* # RUST */
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   /* # THEME COLORS */
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
-        "scope": ["comment.block.json.comments", "meta.structure.dictionary.json.comments source.json.comments"],
+        "scope": [
+          "comment.block.json.comments",
+          "meta.structure.dictionary.json.comments source.json.comments"
+        ],
         "settings": {
-          "foreground": "#67E480",
+          "foreground": "#67E480"
         }
       }
     ]
   },
+  /* # TERMINAL */
+  "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.env.linux": {},
   /* # OTHERS */
   // Coisas de Extenções - Nem sei o que são essas configurações
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.accessibilitySupport": "off",
   "diffEditor.ignoreTrimWhitespace": true,
-  "github.copilot.editor.enableAutoCompletions": true
+  "github.copilot.editor.enableAutoCompletions": true,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "explorer.confirmPasteNative": false,
+  "[mdx]": {
+    "editor.defaultFormatter": "unifiedjs.vscode-mdx",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wrappingIndent": "same",
+    "editor.wordWrapColumn": 72
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.terminal.activateEnvironment": true,
+  "cSpell.language": "en,pt,pt-BR",
+  "cSpell.userWords": ["futurebrand"]
 }
