@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { toPascalCase, toSnakeCase } from '../utils/string';
+import { toPascalCase, toKebabCase } from '../utils/string';
 
 function getReactIndexTemplate(name: string) {
   const text = `export { default } from './${name}'
@@ -12,7 +12,11 @@ function getReactComponentTemplate(name: string) {
 	const text =  `import React from 'react'
 
 const ${name} = () => {
-  return <p>${name} Component 2</p>
+  return (
+    <div>
+      <p>${name}</p>
+    </div>
+  )
 }
 
 export default ${name}
@@ -22,7 +26,7 @@ export default ${name}
 }
 
 export async function createReactComponentTemplate(name: string, uri: vscode.Uri) {
-	const fileName = toSnakeCase(name);
+	const fileName = toKebabCase(name);
   const componentName = toPascalCase(name);
   
   const componentTemplate = getReactComponentTemplate(componentName);

@@ -12,6 +12,14 @@ export function toPascalCase(str: string): string {
   return camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
 }
 
+export function toKebabCase(str: string): string {
+  return str
+    .replace(/\.?([A-Z]+)/g, (_$1, $2) => '-' + $2.toLowerCase())
+    .replace(/[-_\s]+/g, '-')
+    .replace(/^-/, '')
+    .toLowerCase();
+}
+
 export function toSnakeCase(str: string): string {
   return str
     .replace(/\.?([A-Z]+)/g, (_$1, $2) => '_' + $2.toLowerCase())

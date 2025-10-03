@@ -2,7 +2,7 @@
   "name": "utils",
   "displayName": "utils",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.104.0"
   },
@@ -31,6 +31,7 @@
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
+    "build": "vsce package -o ./download --skip-license --allow-missing-repository",
     "watch": "tsc -watch -p ./",
     "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint src",
