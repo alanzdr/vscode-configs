@@ -11,7 +11,11 @@ function getReactIndexTemplate(name: string) {
 function getReactComponentTemplate(name: string) {
 	const text =  `import React from 'react'
 
-const ${name} = () => {
+interface Props {
+
+}
+
+const ${name}: React.FC<Props> = () => {
   return (
     <div>
       <p>${name}</p>
